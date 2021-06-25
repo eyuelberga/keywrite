@@ -17,13 +17,13 @@ jobs:
               run: echo "::set-output name=dir::$(yarn cache dir)"
 
             - name: Checkout Repo
-              uses: actions/checkout@main
+              uses: actions/checkout@master
               with:
                   # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
                   fetch-depth: 0
 
             - name: Setup Node.js 12.x
-              uses: actions/setup-node@main
+              uses: actions/setup-node@master
               with:
                   node-version: 12.x
 
@@ -44,7 +44,7 @@ jobs:
                   git config --global user.name "eyuelberga"
 
             - name: Publish packages
-              uses: changesets/action@main
+              uses: changesets/action@master
               with:
                   publish: yarn release
                   commit: 'chore(release): version packages'
