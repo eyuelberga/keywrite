@@ -8,8 +8,7 @@
 
 <p align="center">
 <a href="https://github.com/eyuelberga/keywrite/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/eyuelberga/keywrite"></a>
-<img alt="build" src="https://travis-ci.org/eyuelberga/keywrite.svg?branch=main">
-<a href="https://openbase.com/js/@keywrite/web?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge"><img alt="Rate on Openbase" src="https://badges.openbase.com/js/rating/@keywrite/web.svg"></a>
+<img alt="build" src="https://travis-ci.com/eyuelberga/keywrite.svg?branch=main">
 <a href="https://github.com/eyuelberga/keywrite/blob/main/CODE_OF_CONDUCT.md"><img alt="CONTRIBUTING" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"></a>
 
 </p>
