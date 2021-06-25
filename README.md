@@ -1,16 +1,16 @@
 <p align="center">
   <a href="https://github.com/eyuelberga/keywrite">
-    <img src="https://github.com/eyuelberga/keywrite/blob/master/logo/logo.png?raw=true" alt="Keywrite logo" width="300" />
+    <img src="https://github.com/eyuelberga/keywrite/blob/main/logo/logo.png?raw=true" alt="Keywrite logo" width="300" />
   </a>
 </p>
 
 <br>
 
 <p align="center">
-<a href="https://github.com/eyuelberga/keywrite/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/eyuelberga/keywrite"></a>
-<img alt="build" src="https://travis-ci.org/eyuelberga/keywrite.svg?branch=master">
+<a href="https://github.com/eyuelberga/keywrite/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/eyuelberga/keywrite"></a>
+<img alt="build" src="https://travis-ci.org/eyuelberga/keywrite.svg?branch=main">
 <a href="https://openbase.com/js/@keywrite/web?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge"><img alt="Rate on Openbase" src="https://badges.openbase.com/js/rating/@keywrite/web.svg"></a>
-<a href="https://github.com/eyuelberga/keywrite/blob/master/CODE_OF_CONDUCT.md"><img alt="CONTRIBUTING" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"></a>
+<a href="https://github.com/eyuelberga/keywrite/blob/main/CODE_OF_CONDUCT.md"><img alt="CONTRIBUTING" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"></a>
 
 </p>
 <br />
