@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "composite": true,
+        "downlevelIteration": true,
+        "module": "es6",
+        "moduleResolution": "node"
+    },
+    "include": ["src/**/*"],
+    "references": [
+        {
+            "path": "../core"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "baseUrl": "./packages",
+        "paths": {
+            "@keywrite/core/*": ["core/src/*"],
+            "@keywrite/web/*": ["web/src/*"],
+            "@keywrite/ethiopic-layouts/*": ["ethiopic-layouts/src/*"],
+            "@keywrite/layout-generator/*": ["layout-generator/src/*"]
+        }
+    },
+    "files": [],
+    "references": [
+        {
+            "path": "packages/core"
+        },
+        {
+            "path": "packages/ethiopic-layouts"
+        },
+        {
+            "path": "packages/layout-generator"
+        },
+        {
+            "path": "packages/web"
+        }
+    ]
+}
