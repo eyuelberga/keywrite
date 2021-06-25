@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/eyuelberga/keywrite">
-    <img src="https://github.com/eyuelberga/keywrite/blob/master/logo/logo.png?raw=true" alt="Keywrite logo" width="300" />
+    <img src="https://github.com/eyuelberga/keywrite/blob/main/logo/logo.png?raw=true" alt="Keywrite logo" width="300" />
   </a>
 </p>
 
