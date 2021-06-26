@@ -1,6 +1,6 @@
 {
     "name": "@keywrite/ethiopic-layouts",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
@@ -18,8 +18,8 @@
         "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=10"
     },
     "devDependencies": {
-        "@keywrite/layout-generator": "^0.1.0",
-        "@keywrite/core": "^0.1.0",
+        "@keywrite/layout-generator": "^0.1.1",
+        "@keywrite/core": "^0.1.1",
         "csv-parser": "^3.0.0",
         "ts-node": "^9.1.1"
     }
