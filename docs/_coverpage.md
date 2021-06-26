@@ -1,8 +1,10 @@
-![logo](_media/logo.png)
+![logo](assets/logo.png)
 
-# Keywrite <small>0.1.0</small>
+> type non-latin scripts on the web
 
-> A Javascript library that allows you to type non-latin scripts in any web based application using a standard keyboard.
+**Keywrite** is a Javascript library that allows you to type non-latin scripts in any web based application using a standard keyboard. You can add it to your text input controls and start typing in the your configured keyboard layout.
 
 [GitHub](https://github.com/eyuelberga/keywrite)
-[Get Started](#keywrite)
+[Get Started](README.md)
+
+![color](#D9F8F5)
