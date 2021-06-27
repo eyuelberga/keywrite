@@ -8,7 +8,7 @@
     "exclude": ["src/layouts.ts", "src/generate-from-csv.ts"],
     "references": [
         {
-            "path": "../layout-generator"
+            "path": "../input-method-generator"
         },
         {
             "path": "../core"

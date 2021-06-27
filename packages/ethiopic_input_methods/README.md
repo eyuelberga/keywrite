@@ -1,6 +1,6 @@
 ## @keywrite/ethiopic-layouts
 
-This package contains ethiopic keyboard layouts generated form the specification
+This package contains ethiopic input methods generated form the specification
 described by [the Ge'ez Frontier Foundation specification](http://keyboards.ethiopic.org/specification/)
 
 ## Usage

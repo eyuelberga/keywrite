@@ -1,12 +1,11 @@
-import { Keywrite, KeyboardLayout } from '@keywrite/core';
-
+import Keywrite, { InputMethod } from '@keywrite/core';
 export type Input = HTMLInputElement | HTMLTextAreaElement;
-export class KeywriteWeb extends Keywrite {
+export default class KeywriteWeb extends Keywrite {
     public on: boolean;
     private input: Input;
 
-    constructor(input: Input, layouts: Record<string, KeyboardLayout>, on = true) {
-        super(layouts);
+    constructor(input: Input, inputMethods: Record<string, InputMethod>, on = true) {
+        super(inputMethods);
 
         this.on = on;
         this.input = input;
@@ -73,7 +72,7 @@ export class KeywriteWeb extends Keywrite {
     }
     private setNativeValue(element: Input, value: string): void {
         const prototype = Object.getPrototypeOf(element);
-        const prototypeValueSetter = Object.getOwnPropertyDescriptor(prototype, 'value')?.set;
-        prototypeValueSetter?.call(element, value);
+        const prototypeValueSetter = Object.getOwnPropertyDescriptor(prototype, 'value')!.set;
+        prototypeValueSetter!.call(element, value);
     }
 }

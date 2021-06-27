@@ -1,9 +1,8 @@
-import { KeyboardLayout } from '@keywrite/core';
-type LayoutMeta = { name: string; regions: string[] };
-type LayoutSpec = { meta: LayoutMeta; layout: KeyboardLayout };
-const layout: LayoutSpec = {
+import { InputMethod } from '@keywrite/core';
+import { InputMethodMeta, InputMethodSpec } from './interfaces';
+const inputMethod: InputMethodSpec = {
     meta: { name: 'Bench', regions: ['bcq-ET'] },
-    layout: {
+    inputMethod: {
         h: {
             value: 'ህ',
             next: {
@@ -646,4 +645,4 @@ const layout: LayoutSpec = {
         '>': { value: '›', next: { '>': { value: '»', next: { '>': { value: '>', next: null } } } } },
     },
 };
-export default layout;
+export default inputMethod;

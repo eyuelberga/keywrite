@@ -17,7 +17,7 @@ $ npm install @keywrite/web
 ```javascript
 import { KeywriteWeb } from '@keywrite/web';
 
-// keyboard layout definition
+// input method definition
 import layout from './layout';
 
 // add to HTMLInputElement

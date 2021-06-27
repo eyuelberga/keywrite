@@ -1,6 +1,6 @@
 import { toSequence, setDeep, toPath } from './utils';
 import { ObjectPath } from './interfaces';
-import { KeyboardLayout } from '@keywrite/core';
+import { InputMethod } from '@keywrite/core';
 const generateKeymap = (keys: string[]) => {
     const keymap: Record<string, string[]> = {};
     keys.forEach((key) => {
@@ -14,26 +14,26 @@ const filterKeys = (row: Record<string, string>, keyCol: string, defaultCol: str
         return k !== keyCol && k !== defaultCol && row[k].trim();
     });
 };
-const setSymbolMap = (layout: KeyboardLayout, value: string, path: ObjectPath): void => {
+const setSymbolMap = (inputMethod: InputMethod, value: string, path: ObjectPath): void => {
     const symbolMap = { value, next: null };
-    setDeep(layout, path, symbolMap);
+    setDeep(inputMethod, path, symbolMap);
 };
 
 export const generateMapForRow = (
-    layout: KeyboardLayout,
+    inputMethod: InputMethod,
     row: Record<string, string>,
     keyCol = 'KEY',
     defaultCol = '_',
 ): void => {
     const primaryPaths = toPath(toSequence(row[keyCol]));
     for (const primary of primaryPaths) {
-        setSymbolMap(layout, row[defaultCol], `${primary}`);
+        setSymbolMap(inputMethod, row[defaultCol], `${primary}`);
         const relevantKeys = filterKeys(row, keyCol, defaultCol);
         const keymap = generateKeymap(relevantKeys);
         for (const key of relevantKeys) {
             const paths = toPath(keymap[key], primary);
             for (const path of paths) {
-                setSymbolMap(layout, row[key], path);
+                setSymbolMap(inputMethod, row[key], path);
             }
         }
     }

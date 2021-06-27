@@ -30,35 +30,6 @@ a {
     transition: all 0.3s linear;
 }
 
-div.search {
-    border-bottom: 2px solid #787881;
-    border: none;
-    background-color: var(--theme-color-secondary-light);
-    padding: 0;
-}
-
-.search .results-panel.show {
-    background-color: #05827e;
-    background-color: #fff;
-    color: #000;
-}
-
-.search a {
-    padding: 1rem;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.search a:hover {
-    color: var(--theme-color-dark);
-}
-
-.search p.empty {
-    margin: 0;
-    padding: 1rem;
-    background-color: #f1f1f2;
-}
-
 .sidebar > h1 {
     font-size: 2rem;
 }

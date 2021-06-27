@@ -1,14 +1,14 @@
-export type KeyboardLayout = Record<string, SymbolMap>;
+export type InputMethod = Record<string, SymbolMap>;
 export interface SymbolMap {
     value: string | null;
-    next: KeyboardLayout | null;
+    next: InputMethod | null;
 }
 
-export class Keywrite {
+export default class Keywrite {
     private level: number;
-    private scope: KeyboardLayout;
-    private keyboardLayouts: Record<string, KeyboardLayout>;
-    private currentLayout: string;
+    private scope: InputMethod;
+    private keyboardInputMethods: Record<string, InputMethod>;
+    private currentInputMethod: string;
     protected keyBlacklist: string[] = [
         'Shift',
         'CapsLock',
@@ -32,31 +32,31 @@ export class Keywrite {
         'Tab',
     ];
 
-    constructor(layouts: Record<string, KeyboardLayout>) {
+    constructor(inputMethods: Record<string, InputMethod>) {
         this.level = 0;
         this.scope = {};
-        this.keyboardLayouts = layouts;
-        this.currentLayout = Object.keys(this.keyboardLayouts)[0];
+        this.keyboardInputMethods = inputMethods;
+        this.currentInputMethod = Object.keys(this.keyboardInputMethods)[0];
     }
     get current(): string {
-        return this.currentLayout;
+        return this.currentInputMethod;
     }
 
-    set current(layout: string) {
-        if (layout in this.keyboardLayouts) {
-            this.currentLayout = layout;
+    set current(inputMethod: string) {
+        if (inputMethod in this.keyboardInputMethods) {
+            this.currentInputMethod = inputMethod;
             this.resetScope();
         } else {
-            throw new Error('Layout does not exists');
+            throw new Error('Input Method does not exists');
         }
     }
 
-    get layouts(): string[] {
-        return Object.keys(this.keyboardLayouts);
+    get inputMethods(): string[] {
+        return Object.keys(this.keyboardInputMethods);
     }
-    setLayouts(layouts: Record<string, KeyboardLayout>): void {
-        this.keyboardLayouts = layouts;
-        this.currentLayout = Object.keys(this.keyboardLayouts)[0];
+    setInputMethods(inputMethods: Record<string, InputMethod>): void {
+        this.keyboardInputMethods = inputMethods;
+        this.currentInputMethod = Object.keys(this.keyboardInputMethods)[0];
         this.resetScope();
     }
     public write(char: string): { symbol: string; replace: boolean } {
@@ -77,7 +77,7 @@ export class Keywrite {
         return replace;
     }
     protected resetScope(): void {
-        this.scope = this.keyboardLayouts[this.currentLayout];
+        this.scope = this.keyboardInputMethods[this.currentInputMethod];
         this.level = 0;
     }
 

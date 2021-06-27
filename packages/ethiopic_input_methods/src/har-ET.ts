@@ -1,37 +1,36 @@
-import { KeyboardLayout } from '@keywrite/core';
-type LayoutMeta = { name: string; regions: string[] };
-type LayoutSpec = { meta: LayoutMeta; layout: KeyboardLayout };
-const layout: LayoutSpec = {
-    meta: { name: "Silt'e", regions: ['xst-ET'] },
-    layout: {
+import { InputMethod } from '@keywrite/core';
+import { InputMethodMeta, InputMethodSpec } from './interfaces';
+const inputMethod: InputMethodSpec = {
+    meta: { name: 'Harari', regions: ['har-ET'] },
+    inputMethod: {
         h: {
-            value: 'ህ',
+            value: 'ሕ',
             next: {
-                e: { value: 'ሀ', next: null },
-                E: { value: 'ሀ', next: null },
-                u: { value: 'ሁ', next: null },
-                U: { value: 'ሁ', next: null },
-                i: { value: 'ሂ', next: { e: { value: 'ሄ', next: null }, E: { value: 'ሄ', next: null } } },
-                I: { value: 'ሂ', next: { e: { value: 'ሄ', next: null }, E: { value: 'ሄ', next: null } } },
-                a: { value: 'ሃ', next: null },
-                A: { value: 'ሃ', next: null },
-                o: { value: 'ሆ', next: null },
-                O: { value: 'ሆ', next: null },
+                e: { value: 'ሐ', next: null },
+                E: { value: 'ሐ', next: null },
+                u: { value: 'ሑ', next: null },
+                U: { value: 'ሑ', next: null },
+                i: { value: 'ሒ', next: { e: { value: 'ሔ', next: null }, E: { value: 'ሔ', next: null } } },
+                I: { value: 'ሒ', next: { e: { value: 'ሔ', next: null }, E: { value: 'ሔ', next: null } } },
+                a: { value: 'ሓ', next: null },
+                A: { value: 'ሓ', next: null },
+                o: { value: 'ሖ', next: null },
+                O: { value: 'ሖ', next: null },
             },
         },
         H: {
-            value: 'ህ',
+            value: 'ሕ',
             next: {
-                e: { value: 'ሀ', next: null },
-                E: { value: 'ሀ', next: null },
-                u: { value: 'ሁ', next: null },
-                U: { value: 'ሁ', next: null },
-                i: { value: 'ሂ', next: { e: { value: 'ሄ', next: null }, E: { value: 'ሄ', next: null } } },
-                I: { value: 'ሂ', next: { e: { value: 'ሄ', next: null }, E: { value: 'ሄ', next: null } } },
-                a: { value: 'ሃ', next: null },
-                A: { value: 'ሃ', next: null },
-                o: { value: 'ሆ', next: null },
-                O: { value: 'ሆ', next: null },
+                e: { value: 'ሐ', next: null },
+                E: { value: 'ሐ', next: null },
+                u: { value: 'ሑ', next: null },
+                U: { value: 'ሑ', next: null },
+                i: { value: 'ሒ', next: { e: { value: 'ሔ', next: null }, E: { value: 'ሔ', next: null } } },
+                I: { value: 'ሒ', next: { e: { value: 'ሔ', next: null }, E: { value: 'ሔ', next: null } } },
+                a: { value: 'ሓ', next: null },
+                A: { value: 'ሓ', next: null },
+                o: { value: 'ሖ', next: null },
+                O: { value: 'ሖ', next: null },
             },
         },
         l: {
@@ -274,6 +273,36 @@ const layout: LayoutSpec = {
                 O: { value: 'ቦ', next: null },
             },
         },
+        p: {
+            value: 'ብ',
+            next: {
+                e: { value: 'በ', next: null },
+                E: { value: 'በ', next: null },
+                u: { value: 'ቡ', next: null },
+                U: { value: 'ቡ', next: null },
+                i: { value: 'ቢ', next: { e: { value: 'ቤ', next: null }, E: { value: 'ቤ', next: null } } },
+                I: { value: 'ቢ', next: { e: { value: 'ቤ', next: null }, E: { value: 'ቤ', next: null } } },
+                a: { value: 'ባ', next: null },
+                A: { value: 'ባ', next: null },
+                o: { value: 'ቦ', next: null },
+                O: { value: 'ቦ', next: null },
+            },
+        },
+        P: {
+            value: 'ብ',
+            next: {
+                e: { value: 'በ', next: null },
+                E: { value: 'በ', next: null },
+                u: { value: 'ቡ', next: null },
+                U: { value: 'ቡ', next: null },
+                i: { value: 'ቢ', next: { e: { value: 'ቤ', next: null }, E: { value: 'ቤ', next: null } } },
+                I: { value: 'ቢ', next: { e: { value: 'ቤ', next: null }, E: { value: 'ቤ', next: null } } },
+                a: { value: 'ባ', next: null },
+                A: { value: 'ባ', next: null },
+                o: { value: 'ቦ', next: null },
+                O: { value: 'ቦ', next: null },
+            },
+        },
         t: {
             value: 'ት',
             next: {
@@ -425,18 +454,18 @@ const layout: LayoutSpec = {
             },
         },
         Z: {
-            value: 'ዥ',
+            value: 'ዝ',
             next: {
-                e: { value: 'ዠ', next: null },
-                E: { value: 'ዠ', next: null },
-                u: { value: 'ዡ', next: null },
-                U: { value: 'ዡ', next: null },
-                i: { value: 'ዢ', next: { e: { value: 'ዤ', next: null }, E: { value: 'ዤ', next: null } } },
-                I: { value: 'ዢ', next: { e: { value: 'ዤ', next: null }, E: { value: 'ዤ', next: null } } },
-                a: { value: 'ዣ', next: null },
-                A: { value: 'ዣ', next: null },
-                o: { value: 'ዦ', next: null },
-                O: { value: 'ዦ', next: null },
+                e: { value: 'ዘ', next: null },
+                E: { value: 'ዘ', next: null },
+                u: { value: 'ዙ', next: null },
+                U: { value: 'ዙ', next: null },
+                i: { value: 'ዚ', next: { e: { value: 'ዜ', next: null }, E: { value: 'ዜ', next: null } } },
+                I: { value: 'ዚ', next: { e: { value: 'ዜ', next: null }, E: { value: 'ዜ', next: null } } },
+                a: { value: 'ዛ', next: null },
+                A: { value: 'ዛ', next: null },
+                o: { value: 'ዞ', next: null },
+                O: { value: 'ዞ', next: null },
             },
         },
         y: {
@@ -589,21 +618,6 @@ const layout: LayoutSpec = {
                 O: { value: 'ጮ', next: null },
             },
         },
-        P: {
-            value: 'ጵ',
-            next: {
-                e: { value: 'ጰ', next: null },
-                E: { value: 'ጰ', next: null },
-                u: { value: 'ጱ', next: null },
-                U: { value: 'ጱ', next: null },
-                i: { value: 'ጲ', next: { e: { value: 'ጴ', next: null }, E: { value: 'ጴ', next: null } } },
-                I: { value: 'ጲ', next: { e: { value: 'ጴ', next: null }, E: { value: 'ጴ', next: null } } },
-                a: { value: 'ጳ', next: null },
-                A: { value: 'ጳ', next: null },
-                o: { value: 'ጶ', next: null },
-                O: { value: 'ጶ', next: null },
-            },
-        },
         f: {
             value: 'ፍ',
             next: {
@@ -634,21 +648,6 @@ const layout: LayoutSpec = {
                 O: { value: 'ፎ', next: null },
             },
         },
-        p: {
-            value: 'ፕ',
-            next: {
-                e: { value: 'ፐ', next: null },
-                E: { value: 'ፐ', next: null },
-                u: { value: 'ፑ', next: null },
-                U: { value: 'ፑ', next: null },
-                i: { value: 'ፒ', next: { e: { value: 'ፔ', next: null }, E: { value: 'ፔ', next: null } } },
-                I: { value: 'ፒ', next: { e: { value: 'ፔ', next: null }, E: { value: 'ፔ', next: null } } },
-                a: { value: 'ፓ', next: null },
-                A: { value: 'ፓ', next: null },
-                o: { value: 'ፖ', next: null },
-                O: { value: 'ፖ', next: null },
-            },
-        },
         e: { value: 'እ', next: null },
         i: { value: 'ኢ', next: { e: { value: 'ኤ', next: null }, E: { value: 'ኤ', next: null } } },
         o: { value: 'ኦ', next: null },
@@ -663,4 +662,4 @@ const layout: LayoutSpec = {
         '>': { value: '›', next: { '>': { value: '»', next: { '>': { value: '>', next: null } } } } },
     },
 };
-export default layout;
+export default inputMethod;

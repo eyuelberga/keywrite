@@ -7,7 +7,8 @@
     -   [Basic Usage](basic_usage.md)
     -   [Advanced Usage](advanced_usage.md)
 -   Reference
-    -   [Keyboard Layout](keyboard_layout.md)
     -   [Examples](examples.md)
-    -   [Pre-made Layouts](pre_made_layouts.md)
+    -   [Input Method](input_method.md)
+    -   [Pre-made Input methods](pre_made_input-methods.md)
+    -   [Input Method Generator](input_method_generator.md)
     -   [Packages](packages.md)

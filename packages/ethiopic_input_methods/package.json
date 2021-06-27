@@ -1,12 +1,12 @@
 {
-    "name": "@keywrite/ethiopic-layouts",
+    "name": "@keywrite/ethiopic-input-methods",
     "version": "0.1.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "directory": "packages/ethiopic-layouts",
+        "directory": "packages/ethiopic-input-methods",
         "url": "https://github.com/eyuelberga/keywrite.git"
     },
     "scripts": {
@@ -18,7 +18,7 @@
         "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=10"
     },
     "devDependencies": {
-        "@keywrite/layout-generator": "^0.1.1",
+        "@keywrite/input-method-generator": "^0.1.1",
         "@keywrite/core": "^0.1.1",
         "csv-parser": "^3.0.0",
         "ts-node": "^9.1.1"

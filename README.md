@@ -19,7 +19,7 @@ Keywrite is a Javascript library that allows you to type non-latin scripts in an
 ## Features 🚀
 
 -   **Ease of Use:** Keywrite can be integrated to most modern web frameworks with ease.
--   **Flexible Keyboard Layouts:** You can configure Keywrite with different keyboard layouts and also change layouts at runtime.
+-   **Flexible Input Methods:** You can configure Keywrite with different input methods and also change layouts at runtime.
 -   **Custom Layouts:** You can create your own layouts and add them to Keywrite
 -   **Fully Extendable:** You can extend the Keywrite core API easily to support different use-cases.
 -   **Typescript Support:** The codebase is completely written in typescript

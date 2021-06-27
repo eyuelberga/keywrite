@@ -22,12 +22,14 @@ Once you have installed the `@keywrite/web` you can import it to your project:
 import { KeywriteWeb } from '@keywrite/web';
 ```
 
-You also need a keyboard layout to start using Keywrite. [Keyboard layouts](keyboard_layout.md)
-map keyboard inputs to symbols, this will allow you to define which key combinations that
-produce a certain symbol. Lets define a simple keyboard layout to get started:
+You also need a Input-method to start using Keywrite. [Keyboard Input-methods](input_method.md)
+map keyboard inputs to symbols, this will allow us to define key stroke
+combinations that produce a certain symbol.
+
+Lets define a simple input-method to get started:
 
 ```javascript
-const myLayout = {
+const myInputMethod = {
     a: { value: '∀', next: null },
     e: {
         value: '∈',
@@ -41,16 +43,16 @@ const myLayout = {
 };
 ```
 
-Refer to [this guide](keyboard_layout.md) to learn more about keyboard layouts.
+Refer to [this guide](input_method.md) to learn more about Input-methods.
 
 Next, we initialize our `KeywriteWeb` instance using a reference to either a
-`textarea` or `input` element and the layout.
+`textarea` or `input` element and the Input-method.
 
 ```javascript
 // add to HTMLInputElement
-new KeywriteWeb(document.querySelector('input'), { myLayout });
+new KeywriteWeb(document.querySelector('input'), { myInputMethod });
 // add to HTMLTextAreaElement
-new KeywriteWeb(document.querySelector('textarea'), { myLayout });
+new KeywriteWeb(document.querySelector('textarea'), { myInputMethod });
 ```
 
 The complete code is shown below:
