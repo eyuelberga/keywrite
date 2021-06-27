@@ -49,9 +49,7 @@ myKeywriteInstance.on = true;
 
 It is possible to add more than one keyboard layout to an instance. This could
 be useful if you want users to pick from a selection of
-input methods.
-
-multiple layout definitions can be added during initialization.
+input methods. Multiple layout definitions can be added during initialization.
 
 ```javascript
 // keyboard layout definitions
@@ -68,7 +66,7 @@ const myKeywriteInstance = new KeywriteWeb(document.querySelector('input'), {
 });
 ```
 
-You switch between the layouts by setting the `current` value in the instance to
+You can switch between the layouts by setting the `current` value in the instance to
 the key name of the layout you want.
 
 ```javascript

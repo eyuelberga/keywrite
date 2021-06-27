@@ -16,8 +16,8 @@ The aim of this project is to enable web developers to add support for typing no
 
 **What does Keywrite do?**
 
-1. It allows you to map certain keyboard inputs to characters, which you define in a keyboard layout configuration file.
-1. It binds with web input controls to add multi-lingual typing to your website
+1. It allows you to map keyboard inputs to symbols, which you define in a keyboard layout configuration file.
+1. It binds with web input controls to add multi-lingual typing to your web application
 
 **Things you can build with Keywrite**
 
