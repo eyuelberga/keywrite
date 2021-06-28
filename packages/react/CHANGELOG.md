@@ -1,5 +1,12 @@
 # @keywrite/web
 
+## 0.1.2
+
+### Patch Changes
+
+-   Updated dependencies [[`dfbbf5f`](https://github.com/eyuelberga/keywrite/commit/dfbbf5fe269015e5c08ec5d5787862104c82562c)]:
+    -   @keywrite/web@1.0.0
+
 ## 0.1.1
 
 ### Patch Changes
