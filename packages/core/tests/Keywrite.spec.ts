@@ -1,8 +1,8 @@
-import { Keywrite } from '../src';
+import Keywrite from '../src';
 describe('Keywrite.ts', () => {
     let instance: any = null;
-    const layouts = {
-        layout1: {
+    const inputMethods = {
+        inputMethod1: {
             a: { value: 'አ', next: null },
             i: {
                 value: 'ኢ',
@@ -59,62 +59,62 @@ describe('Keywrite.ts', () => {
                 },
             },
         },
-        layout2: { b: { value: 'b', next: null }, a: { value: 'ኢ', next: null } },
+        inputMethod2: { b: { value: 'b', next: null }, a: { value: 'ኢ', next: null } },
     };
     beforeEach(() => {
-        instance = new Keywrite(layouts);
+        instance = new Keywrite(inputMethods);
     });
-    it('should set current keyboard-layout to first on map by default', () => {
-        expect(instance.current).toBe('layout1');
+    it('should set current keyboard-input-method to first on map by default', () => {
+        expect(instance.current).toBe('inputMethod1');
     });
-    it('should set current keyboard-layout using name', () => {
-        const newLayout = 'layout2';
-        instance.current = newLayout;
-        expect(instance.current).toBe(newLayout);
+    it('should set current keyboard-input-method using name', () => {
+        const newInputMethod = 'inputMethod2';
+        instance.current = newInputMethod;
+        expect(instance.current).toBe(newInputMethod);
     });
-    it("should throw error if input for current keyboard-layout doesn't exist on map", () => {
-        const unknownLayout = 'layout-unknown';
+    it("should throw error if the value set for `current` doesn't exist on keyboard-input-method map", () => {
+        const unknownInputMethod = 'inputMethod-unknown';
         expect(() => {
-            instance.current = unknownLayout;
+            instance.current = unknownInputMethod;
         }).toThrow();
     });
-    it('should get all avaliable keyboard-layout names ', () => {
-        expect(instance.layouts).toContain('layout1');
-        expect(instance.layouts).toContain('layout2');
+    it('should get all avaliable keyboard-input-method names ', () => {
+        expect(instance.inputMethods).toContain('inputMethod1');
+        expect(instance.inputMethods).toContain('inputMethod2');
     });
-    it('should set new keyboard-layout map ', () => {
-        const newLayouts = {
-            layout3: { a: { value: 'a', next: null } },
-            layout4: { b: { value: 'b', next: null } },
+    it('should set new keyboard-input-method map ', () => {
+        const newInputMethods = {
+            inputMethod3: { a: { value: 'a', next: null } },
+            inputMethod4: { b: { value: 'b', next: null } },
         };
-        instance.setLayouts(newLayouts);
-        expect(instance.layouts).toContain('layout3');
-        expect(instance.layouts).toContain('layout4');
+        instance.setInputMethods(newInputMethods);
+        expect(instance.inputMethods).toContain('inputMethod3');
+        expect(instance.inputMethods).toContain('inputMethod4');
     });
 
-    it('should update current layout when new keyboard-layout map is set ', () => {
-        const newLayouts = {
-            layout3: { a: { value: 'a', next: null } },
-            layout4: { b: { value: 'b', next: null } },
+    it('should update current input method when new keyboard-input-method map is set ', () => {
+        const newInputMethods = {
+            inputMethod3: { a: { value: 'a', next: null } },
+            inputMethod4: { b: { value: 'b', next: null } },
         };
-        instance.setLayouts(newLayouts);
-        expect(instance.current).toBe('layout3');
+        instance.setInputMethods(newInputMethods);
+        expect(instance.current).toBe('inputMethod3');
     });
 
-    it('should be able to use new layout after change', () => {
+    it('should be able to use new input method after changing', () => {
         expect(instance.write('a')).toEqual({ symbol: 'አ', replace: false });
-        const newLayout = 'layout2';
-        instance.current = newLayout;
+        const newInputMethod = 'inputMethod2';
+        instance.current = newInputMethod;
         expect(instance.write('a')).toEqual({ symbol: 'ኢ', replace: false });
     });
 
-    it('should be able to use new layout after new keyboard-layout map is set ', () => {
+    it('should be able to use new input method after new keyboard-input-methods map is set ', () => {
         expect(instance.write('a')).toEqual({ symbol: 'አ', replace: false });
-        const newLayouts = {
-            layout3: { a: { value: '@', next: null } },
-            layout4: { b: { value: '&', next: null } },
+        const newInputMethods = {
+            inputMethod3: { a: { value: '@', next: null } },
+            inputMethod4: { b: { value: '&', next: null } },
         };
-        instance.setLayouts(newLayouts);
+        instance.setInputMethods(newInputMethods);
         expect(instance.write('a')).toEqual({ symbol: '@', replace: false });
     });
 

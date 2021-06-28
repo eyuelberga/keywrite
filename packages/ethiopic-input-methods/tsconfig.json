@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "composite": true
+    },
+    "exclude": ["src/layouts.ts", "src/generate-from-csv.ts"],
+    "references": [
+        {
+            "path": "../input-method-generator"
+        },
+        {
+            "path": "../core"
+        }
+    ]
+}

@@ -5,8 +5,9 @@
         "paths": {
             "@keywrite/core/*": ["core/src/*"],
             "@keywrite/web/*": ["web/src/*"],
-            "@keywrite/ethiopic-layouts/*": ["ethiopic-layouts/src/*"],
-            "@keywrite/layout-generator/*": ["layout-generator/src/*"]
+            "@keywrite/input-method-generator/*": ["input-method-generator/src/*"],
+            "@keywrite/ethiopic-input-methods/*": ["ethiopic-input-methods/src/*"],
+            "@keywrite/react/*": ["react/src/*"]
         }
     },
     "files": [],
@@ -15,10 +16,13 @@
             "path": "packages/core"
         },
         {
-            "path": "packages/ethiopic-layouts"
+            "path": "packages/ethiopic-input-methods"
         },
         {
-            "path": "packages/layout-generator"
+            "path": "packages/input-method-generator"
+        },
+        {
+            "path": "packages/react"
         },
         {
             "path": "packages/web"

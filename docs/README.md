@@ -1,47 +1,35 @@
-<p align="center">
-  <a href="https://github.com/eyuelberga/keywrite">
-    <img src="https://github.com/eyuelberga/keywrite/blob/main/logo/logo.png?raw=true" alt="Keywrite logo" width="300" />
-  </a>
-</p>
+<img src="assets/logo.png" alt="Keywrite logo" title="Keywrite" width="150" align="right" />
 
-<br>
+# Keywrite
 
-<p align="center">
-<a href="https://github.com/eyuelberga/keywrite/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/eyuelberga/keywrite"></a>
-<img alt="build" src="https://travis-ci.org/eyuelberga/keywrite.svg?branch=main">
-<a href="https://openbase.com/js/@keywrite/web?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge"><img alt="Rate on Openbase" src="https://badges.openbase.com/js/rating/@keywrite/web.svg"></a>
-<a href="https://github.com/eyuelberga/keywrite/blob/main/CODE_OF_CONDUCT.md"><img alt="CONTRIBUTING" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"></a>
+> _type non-latin scripts on the web_
 
-</p>
-<br />
+**Keywrite** is a JavaScript library that allows you to type non-latin scripts in any web based application using a standard keyboard. You can add it to your text input controls and start typing with your configured input-method.
 
-Keywrite is a Javascript library that allows you to type non-latin scripts in any web based application using a standard keyboard.
+The aim of this project is to enable web developers to add support for typing non-latin based texts on web and hybrid applications, so users can type different languages without configuring their operating system or installing additional software.
 
-## Features 🚀
+## Examples
 
--   **Ease of Use:** Keywrite can be integrated to most modern web frameworks with ease.
--   **Flexible Keyboard Layouts:** You can configure Keywrite with different keyboard layouts and also change layouts at runtime.
--   **Custom Layouts:** You can create your own layouts and add them to Keywrite
--   **Fully Extendable:** You can extend the Keywrite core API easily to support different use-cases.
--   **Typescript Support:** The codebase is completely written in typescript
+[See examples of Keywrite here](examples.md)
 
-## Installing Keywrite
+## The Basics
 
-To use Keywrite on web projects, all you need to do is install the
-`@keywrite/web` package:
+**What does Keywrite do?**
 
-```sh
-$ yarn add @keywrite/web
+1. It allows you to translate key strokes to non-latin characters, which you define in a input-method configuration file.
+1. It binds with web input controls to add multi-lingual typing to your web application
 
-# or
+**Things you can build with Keywrite**
 
-$ npm install @keywrite/web
-```
+1. A web form you want to be filled in a certain language [See Demo]()
+1. A textfield with multiple language support [See Demo]()
+1. A web-based rich-text editor which you can type in multiple languages [See Demo]()
 
 ## Contributing
 
 Feel like contributing? That's awesome! We have a
-[contributing guide](./CONTRIBUTING.md) to help guide you.
+[CONTRIBUTING.md](https://github.com/eyuelberga/keywrite/blob/main/CONTRIBUTING.md)
+to help guide you.
 
 ## License
 

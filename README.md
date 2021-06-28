@@ -14,13 +14,13 @@
 </p>
 <br />
 
-Keywrite is a Javascript library that allows you to type non-latin scripts in any web based application using a standard keyboard.
+Keywrite is a Javascript library that allows you to type non-latin scripts in any web based application using a standard keyboard. See the [Docs](https://eyuelberga.github.io/keywrite) for more info.
 
 ## Features 🚀
 
 -   **Ease of Use:** Keywrite can be integrated to most modern web frameworks with ease.
--   **Flexible Keyboard Layouts:** You can configure Keywrite with different keyboard layouts and also change layouts at runtime.
--   **Custom Layouts:** You can create your own layouts and add them to Keywrite
+-   **Flexible:** You can configure Keywrite with multiple Input-methods, change between them at runtime.
+-   **Custom Input Method:** You can easily define your own Input-methods and add them to Keywrite
 -   **Fully Extendable:** You can extend the Keywrite core API easily to support different use-cases.
 -   **Typescript Support:** The codebase is completely written in typescript
 
