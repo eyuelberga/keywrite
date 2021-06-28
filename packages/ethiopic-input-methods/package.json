@@ -14,8 +14,7 @@
         "prepack": "yarn build",
         "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
         "test": "jest --passWithNoTests",
-        "generate": "ts-node src/generate-from-csv.ts",
-        "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=10"
+        "generate": "ts-node src/generate-from-csv.ts"
     },
     "devDependencies": {
         "@keywrite/input-method-generator": "^0.1.1",

@@ -1,5 +1,4 @@
-import { InputMethod } from '@keywrite/core';
-import { InputMethodMeta, InputMethodSpec } from './interfaces';
+import { InputMethodSpec } from './interfaces';
 const inputMethod: InputMethodSpec = {
     meta: { name: 'Bench', regions: ['bcq-ET'] },
     inputMethod: {

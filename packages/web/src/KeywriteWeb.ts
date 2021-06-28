@@ -1,5 +1,6 @@
 import Keywrite, { InputMethod } from '@keywrite/core';
 export type Input = HTMLInputElement | HTMLTextAreaElement;
+export { InputMethod } from '@keywrite/core';
 export default class KeywriteWeb extends Keywrite {
     public on: boolean;
     private input: Input;

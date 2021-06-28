@@ -27,8 +27,7 @@ for (const [code, { name, path, regions }] of Object.entries(inputMethods)) {
 
             fs.writeFileSync(
                 `${__dirname}/${code}.ts`,
-                `import { InputMethod } from '@keywrite/core';
-                import {InputMethodMeta, InputMethodSpec} from './interfaces';
+                `import {InputMethodSpec} from './interfaces';
                 const inputMethod : InputMethodSpec = ${JSON.stringify({
                     meta,
                     inputMethod: { ...inputMethod, ...punctuation },

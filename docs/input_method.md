@@ -22,8 +22,8 @@ const myInputMethod = {
 };
 ```
 
-In the above input-method, the `a` key stroke is translated to the `∀` symbol.
-Pressing `e` will output `∈`, pressing `e` again will output `∉`.
+In the above input-method, the <kbd>a</kbd> key stroke is translated to the `∀` symbol.
+Pressing <kbd>e</kbd> will output `∈`, pressing <kbd>e</kbd> again will output `∉`.
 
 ## Components of an Input-method
 
@@ -49,7 +49,7 @@ type InputMethod = Record<string, SymbolMap>;
 `value` represents the output symbol and `next` represents the next
 input-method definition.
 
-From our previous example, the symbol map for the `a` key is this:
+From our previous example, the symbol map for the <kbd>a</kbd> key is this:
 
 ```javascript
 const symbolMapA = { value: '∀', next: null };
@@ -76,12 +76,12 @@ const inputMethodWithMoreInputKeys = {
 
 Our inputs and outputs for the above input-method are as follows:
 
-| Input Key | Output Symbol |
-| --------- | ------------- |
-| `a`       | ∀             |
-| `b`       | ⋈             |
-| `c`       | ⊂             |
-| `d`       | ∂             |
+| Input Key    | Output Symbol |
+| ------------ | ------------- |
+| <kbd>a</kbd> | ∀             |
+| <kbd>b</kbd> | ⋈             |
+| <kbd>c</kbd> | ⊂             |
+| <kbd>d</kbd> | ∂             |
 
 We would also need to map certain combination of key strokes to a single character.
 We can do that by nesting additional input-methods in the symbol map `next` field.
@@ -157,24 +157,24 @@ const myInputMethod = {
 
 Now our input output table looks like this:
 
-| Input Key             | Output Symbol |
-| --------------------- | ------------- |
-| `a`                   | ∀             |
-| `b`                   | ⋈             |
-| `b` + `l`             | ⋉             |
-| `b` + `r`             | ⋊             |
-| `c`                   | ⊂             |
-| `c` + `u`             | ⊆             |
-| `c` + `u` + `n`       | ⊈             |
-| `c` + `n`             | ⊄             |
-| `c` + `n` + `u`       | ⊈             |
-| `c` + `l`             | ⊃             |
-| `c` + `l` + `n`       | ⊅             |
-| `c` + `l` + `n` + `u` | ⊉             |
-| `c` + `l` + `u`       | ⊇             |
-| `c` + `u`             | ⊇             |
-| `c` + `u` + `n`       | ⊉             |
-| `d`                   | ∂             |
+| Input Key                                                 | Output Symbol |
+| --------------------------------------------------------- | ------------- |
+| <kbd>a</kbd>                                              | ∀             |
+| <kbd>b</kbd>                                              | ⋈             |
+| <kbd>b</kbd> + <kbd>l</kbd>                               | ⋉             |
+| <kbd>b</kbd> + <kbd>r</kbd>                               | ⋊             |
+| <kbd>c</kbd>                                              | ⊂             |
+| <kbd>c</kbd> + <kbd>u</kbd>                               | ⊆             |
+| <kbd>c</kbd> + <kbd>u</kbd> + <kbd>n</kbd>                | ⊈             |
+| <kbd>c</kbd> + <kbd>n</kbd>                               | ⊄             |
+| <kbd>c</kbd> + <kbd>n</kbd> + <kbd>u</kbd>                | ⊈             |
+| <kbd>c</kbd> + <kbd>l</kbd>                               | ⊃             |
+| <kbd>c</kbd> + <kbd>l</kbd> + <kbd>n</kbd>                | ⊅             |
+| <kbd>c</kbd> + <kbd>l</kbd> + <kbd>n</kbd> + <kbd>u</kbd> | ⊉             |
+| <kbd>c</kbd> + <kbd>l</kbd> + <kbd>u</kbd>                | ⊇             |
+| <kbd>c</kbd> + <kbd>u</kbd>                               | ⊇             |
+| <kbd>c</kbd> + <kbd>u</kbd> + <kbd>n</kbd>                | ⊉             |
+| <kbd>d</kbd>                                              | ∂             |
 
 The complete code is shown below:
 
@@ -189,9 +189,9 @@ The complete code is shown below:
 
 Keyboard Input-method definitions are simple JavaScript objects. It is possible
 to manually write a input-method definition that will work with Keywrite,
-but a better way would be to use the [Input method Generator](input-method_generator.md).
+but a better way would be to use the [Input method Generator](input_method_generator.md).
 
 ## Pre-made Input-methods
 
 Some input-methods are available pre-made and you add simply add them to your project.
-A list of all available input-methods can be found [here](pre_made_input-methods.md)
+A list of all available input-methods can be found [here](pre_made_input_methods.md)

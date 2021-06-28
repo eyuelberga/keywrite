@@ -6,7 +6,8 @@
             "@keywrite/core/*": ["core/src/*"],
             "@keywrite/web/*": ["web/src/*"],
             "@keywrite/input-method-generator/*": ["input-method-generator/src/*"],
-            "@keywrite/ethiopic-input-methods/*": ["ethiopic-input-methods/src/*"]
+            "@keywrite/ethiopic-input-methods/*": ["ethiopic-input-methods/src/*"],
+            "@keywrite/react/*": ["react/src/*"]
         }
     },
     "files": [],
@@ -15,10 +16,13 @@
             "path": "packages/core"
         },
         {
-            "path": "packages/ethiopic_input_methods"
+            "path": "packages/ethiopic-input-methods"
         },
         {
             "path": "packages/input-method-generator"
+        },
+        {
+            "path": "packages/react"
         },
         {
             "path": "packages/web"
