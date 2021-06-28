@@ -1,6 +1,6 @@
 {
     "name": "@keywrite/react",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "private": true,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
         "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=10"
     },
     "dependencies": {
-        "@keywrite/web": "^0.1.1"
+        "@keywrite/web": "^1.0.0"
     },
     "devDependencies": {
         "react": "^17.0.2",

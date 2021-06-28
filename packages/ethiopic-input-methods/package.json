@@ -1,6 +1,6 @@
 {
     "name": "@keywrite/ethiopic-input-methods",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
@@ -17,8 +17,8 @@
         "generate": "ts-node src/generate-from-csv.ts"
     },
     "devDependencies": {
-        "@keywrite/input-method-generator": "^0.1.1",
-        "@keywrite/core": "^0.1.1",
+        "@keywrite/input-method-generator": "^1.0.0",
+        "@keywrite/core": "^1.0.0",
         "csv-parser": "^3.0.0",
         "ts-node": "^9.1.1"
     }
