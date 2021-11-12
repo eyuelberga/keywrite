@@ -14,7 +14,7 @@
 </p>
 <br />
 
-Keywrite is a Javascript library that allows you to type non-latin scripts in any web based application using a standard keyboard. See the [Docs](https://eyuelberga.github.io/keywrite) for more info.
+Keywrite is a Javascript IME library that allows you to type non-latin scripts in any web based application using a standard keyboard. See the [Docs](https://eyuelberga.github.io/keywrite) for more info.
 
 ## Features 🚀
 
