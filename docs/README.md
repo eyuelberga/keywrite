@@ -4,9 +4,7 @@
 
 > _type non-latin scripts on the web_
 
-**Keywrite** is a JavaScript library that allows you to type non-latin scripts in any web based application using a standard keyboard. You can add it to your text input controls and start typing with your configured input-method.
-
-The aim of this project is to enable web developers to add support for typing non-latin based texts on web and hybrid applications, so users can type different languages without configuring their operating system or installing additional software.
+**Keywrite** is a JavaScript Input Method Editor (IME) library for adding configurable input methods to the web. It enables users to input text in a language that can't be represented easily on a standard QWERTY keyboard.
 
 ## Examples
 
