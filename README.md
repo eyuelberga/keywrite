@@ -13,8 +13,8 @@
 
 </p>
 <br />
-
-Keywrite is a Javascript IME library that allows you to type non-latin scripts in any web based application using a standard keyboard. See the [Docs](https://eyuelberga.github.io/keywrite) for more info.
+	
+Keywrite is a JavaScript Input Method Editor (IME) library for adding configurable input methods to the web. It enables users to input text in a language that can't be represented easily on a standard QWERTY keyboard. See the [Docs](https://eyuelberga.github.io/keywrite) for more info.
 
 ## Features 🚀
 
