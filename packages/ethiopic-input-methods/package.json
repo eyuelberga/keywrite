@@ -14,7 +14,8 @@
         "prepack": "yarn build",
         "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
         "test": "jest --passWithNoTests",
-        "generate": "ts-node src/generate-from-csv.ts"
+        "generate": "ts-node src/generate-from-csv.ts",
+        "prettier-write": "prettier --write \"{src,test}/**/*.{js,ts,jsx,tsx,json,css,scss,html}\""
     },
     "devDependencies": {
         "@keywrite/input-method-generator": "^1.0.0",

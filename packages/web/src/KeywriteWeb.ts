@@ -12,11 +12,33 @@ export default class KeywriteWeb extends Keywrite {
         this.input = input;
         this.addEvents();
     }
-    private addEvents(): void {
-        this.input.addEventListener('keydown' as const, (e) => {
+    private isBeforeInputEventAvailable(): boolean {
+        return (
+            !!window.InputEvent &&
             //eslint-disable-next-line
-            this.keyDownEventHandler(e as any);
-        });
+            typeof (InputEvent.prototype as any)?.getTargetRanges === 'function'
+        );
+    }
+    private addEvents(): void {
+        if (this.isBeforeInputEventAvailable()) {
+            this.input.addEventListener('beforeinput' as const, (e: Event) => {
+                if (!this.on) return;
+
+                if (!(e instanceof InputEvent)) return;
+
+                if (e.inputType === 'insertText' && e.data) {
+                    e.preventDefault();
+                    const { symbol, replace } = this.write(e.data);
+                    this.writeSymbol(symbol, replace);
+                }
+            });
+        } else {
+            this.input.addEventListener('keydown' as const, (e: Event) => {
+                //eslint-disable-next-line
+                this.keyDownEventHandler(e as any);
+            });
+        }
+
         this.input.addEventListener('focusout', () => {
             this.focusOutEventHandler();
         });
