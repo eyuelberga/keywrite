@@ -12,6 +12,7 @@
         "build": "lerna run build --stream --no-private",
         "lint": "lerna run lint --stream --parallel --no-private",
         "test": "lerna run test  --stream --no-private",
+        "prettier-write": "lerna run prettier-write --stream --no-private",
         "commit": "git-cz",
         "release": "changeset publish",
         "version": "changeset version"
@@ -40,6 +41,11 @@
     "dependencies": {
         "@changesets/changelog-github": "0.2.8",
         "@changesets/cli": "2.14.1"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     },
     "version": "0.0.0"
 }
