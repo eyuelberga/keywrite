@@ -1,5 +1,11 @@
 # @keywrite/web
 
+## 1.1.0
+
+### Minor Changes
+
+-   [`44bd491`](https://github.com/eyuelberga/keywrite/commit/44bd491f680e72468eaa897b796c1c5f54c4c146) [#10](https://github.com/eyuelberga/keywrite/pull/10) Thanks [@eyuelberga](https://github.com/eyuelberga)! - This release improves keyboard input handling by adding robust support for the beforeinput event when available, with a safe fallback to keydown for environments that do not support it. This ensures consistent behavior across desktop, mobile, and testing environments while preserving existing functionality.
+
 ## 1.0.0
 
 ### Major Changes
