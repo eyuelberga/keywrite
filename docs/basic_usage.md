@@ -1,82 +1,128 @@
-# Basic Usage
+## Basic Usage
 
-## Initializing a new Keywrite instance
+### Creating a Keywrite Instance
 
-Creating a new instance of Keywrite requires two parameters.
+The `KeywriteWeb` constructor requires two parameters:
 
-1. **input element:** this is the HTML element you want to bind with the instance
-1. **input-methods:** which is a key value pair of input-method names and definitions
-
-### Binding with input elements
-
-Currently, Keywrite supports binding on `HTMLInputElement` and `HTMLTextAreaElement`.
-During initialization you must provide a reference to the element you wish to bind
-with the Keywrite instance. You can use `document.querySelector` or a similar method.
-
-### Defining Input methods
-
-You also need to provide a Keywrite instance with Input methods. Read more about
-input-methods [here](input_method.md). The `input-methods` parameter takes an object
-with the input-method name being the key and the actual input-method definition
-as the value.
+1. **Input Element:** A reference to an `HTMLInputElement` or `HTMLTextAreaElement`
+2. **Input Methods:** An object containing one or more input method definitions
 
 ```javascript
-// add to HTMLInputElement without enabling it
+import { KeywriteWeb } from '@keywrite/web';
+
+// Get reference to input element
+const inputElement = document.querySelector('input');
+
+// Define input method
+const myInputMethod = {
+    a: { value: '∀', next: null },
+    e: { value: '∈', next: null },
+};
+
+// Create instance
+const keywrite = new KeywriteWeb(inputElement, { myInputMethod });
+```
+
+#### Supported Elements
+
+Keywrite currently supports binding to:
+
+-   `HTMLInputElement` (`<input>` elements)
+-   `HTMLTextAreaElement` (`<textarea>` elements)
+
+```javascript
+// Bind to input
 new KeywriteWeb(document.querySelector('input'), { myInputMethod });
+
+// Bind to textarea
+new KeywriteWeb(document.querySelector('textarea'), { myInputMethod });
 ```
 
-## Enable/Disable Keywrite instance
+### Enabling/Disabling
 
-By default Keywrite is enabled when initialized. This can be overridden by
-setting the `on` parameter during initialization.
+#### Default Behavior
+
+By default, Keywrite is **enabled** when initialized. You can override this by passing a third parameter:
 
 ```javascript
-// add to HTMLInputElement without enabling it
-new KeywriteWeb(document.querySelector('input'), { myInputMethod }, false);
+// Disabled on initialization
+const keywrite = new KeywriteWeb(inputElement, { myInputMethod }, false);
 ```
 
-It is also possible to toggle between on and off states during run time by
-changing the values of the `on` property on the `KeywriteWeb` instance.
+#### Runtime Control
+
+Toggle Keywrite on and off by changing the `on` property:
 
 ```javascript
-// add to HTMLInputElement without enabling it
-const myKeywriteInstance = new KeywriteWeb(document.querySelector('input'), { myInputMethod }, false);
+const keywrite = new KeywriteWeb(inputElement, { myInputMethod }, false);
 
-// change the on property to enable it
-myKeywriteInstance.on = true;
+// Enable it later
+keywrite.on = true;
+
+// Disable it
+keywrite.on = false;
 ```
 
-## Adding multiple input-methods
+This is useful for:
 
-It is possible to add more than one input-method to an instance. This could
-be useful if you want users to pick from a selection of
-input-methods. Multiple input-method definitions can be added during initialization.
+-   Toggling between native and custom input
+-   Language switchers in your UI
+-   Conditional input method activation
+
+### Multiple Input Methods
+
+You can add multiple input methods to a single instance, allowing users to switch between different keyboard layouts.
+
+#### Adding Multiple Methods
 
 ```javascript
-// input-method definitions
 import inputMethod1 from './inputmethod1';
 import inputMethod2 from './inputmethod2';
 import inputMethod3 from './inputmethod3';
 
-// add to HTMLInputElement with multiple input-method definitions
-// the parameter accepts a map of input-method name and its definition
-const myKeywriteInstance = new KeywriteWeb(document.querySelector('input'), {
+const keywrite = new KeywriteWeb(document.querySelector('input'), {
     default: inputMethod1,
     typewriter: inputMethod2,
     mnemonic: inputMethod3,
 });
 ```
 
-You can switch between input-methods by setting the `current` value in the instance to
-the key of the input-method you want.
+#### Switching Between Methods
+
+Use the `current` property to switch active input methods:
 
 ```javascript
-myKeywriteInstance.current = 'typewriter';
+// Switch to typewriter method
+keywrite.current = 'typewriter';
+
+// Switch to mnemonic method
+keywrite.current = 'mnemonic';
+
+// Switch back to default
+keywrite.current = 'default';
 ```
 
-## Using pre-made input-methods
+#### Example: Language Selector
 
-You can install pre-made input-methods to use in your project. A list of all
-available input-methods can be found [here](pre_made_input-methods.md).
+```javascript
+const amharicIM = {
+    /* Amharic input method */
+};
+const tigrignaIM = {
+    /* Tigrigna input method */
+};
+const geezIM = {
+    /* Ge'ez input method */
+};
 
-To create your own input-method, refer to [this guide](input_method_generator.md)
+const keywrite = new KeywriteWeb(input, {
+    amharic: amharicIM,
+    tigrigna: tigrignaIM,
+    geez: geezIM,
+});
+
+// UI dropdown handler
+document.querySelector('#language-select').addEventListener('change', (e) => {
+    keywrite.current = e.target.value;
+});
+```

@@ -5,13 +5,13 @@
 To use Keywrite on web projects you need to install the `@keywrite/web` package:
 
 ```bash
-$ yarn add @keywrite/web
+yarn add @keywrite/web
 ```
 
 or
 
 ```bash
-$ npm install @keywrite/web
+npm install @keywrite/web
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Once you have installed the `@keywrite/web` you can import it to your project:
 import { KeywriteWeb } from '@keywrite/web';
 ```
 
-You also need a Input-method to start using Keywrite. [Keyboard Input-methods](input_method.md)
+You also need a Input-method to start using Keywrite. [Keyboard Input-methods](creating_input_methods.md)
 map keyboard inputs to symbols, this will allow us to define key stroke
 combinations that produce a certain symbol.
 
@@ -42,8 +42,6 @@ const myInputMethod = {
     },
 };
 ```
-
-Refer to [this guide](input_method.md) to learn more about Input-methods.
 
 Next, we initialize our `KeywriteWeb` instance using a reference to either a
 `textarea` or `input` element and the Input-method.

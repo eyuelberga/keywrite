@@ -30,11 +30,11 @@ To use Keywrite on web projects, all you need to do is install the
 `@keywrite/web` package:
 
 ```sh
-$ yarn add @keywrite/web
+yarn add @keywrite/web
 
 # or
 
-$ npm install @keywrite/web
+npm install @keywrite/web
 ```
 
 ## Contributing
@@ -44,4 +44,4 @@ Feel like contributing? That's awesome! We have a
 
 ## License
 
-MIT © [Eyuel Berga](https://github.com/eyuelberga)
+MIT © [Eyuel Woldemichael](https://github.com/eyuelberga)

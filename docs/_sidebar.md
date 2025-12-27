@@ -2,13 +2,13 @@
 
     -   [Overview](README.md)
     -   [Quick Start](quick_start.md)
+    -   [Core Concepts](core_concepts.md)
 
--   Usage
+-   Guide
     -   [Basic Usage](basic_usage.md)
+    -   [Creating Input Methods](creating_input_methods.md)
     -   [Advanced Usage](advanced_usage.md)
--   Reference
-    -   [Examples](examples.md)
-    -   [Input Method](input_method.md)
-    -   [Pre-made Input methods](pre_made_input-methods.md)
-    -   [Input Method Generator](input_method_generator.md)
-    -   [Packages](packages.md)
+    -   [Ethiopic Input methods](ethiopic_input_methods.md)
+-   Ethiopic Input Methods
+    -   [Getting Started](ethiopic_input_methods.md)
+    -   [The Ethiopic Script](ethiopic_input_methods_deep_dive.md)
