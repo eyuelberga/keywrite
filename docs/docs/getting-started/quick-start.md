@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Quick Start
 
 ## Installation
@@ -22,7 +26,7 @@ Once you have installed the `@keywrite/web` you can import it to your project:
 import { KeywriteWeb } from '@keywrite/web';
 ```
 
-You also need a Input-method to start using Keywrite. [Keyboard Input-methods](creating_input_methods.md)
+You also need a Input-method to start using Keywrite. Keyboard Input-methods
 map keyboard inputs to symbols, this will allow us to define key stroke
 combinations that produce a certain symbol.
 
@@ -55,9 +59,16 @@ new KeywriteWeb(document.querySelector('textarea'), { myInputMethod });
 
 The complete code is shown below:
 
-<iframe src="https://codesandbox.io/embed/keywrite-quickstart-js-vdoy1?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="keywrite-quickstart-js"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+<iframe
+  src="https://codesandbox.io/embed/keywrite-quickstart-js-vdoy1?fontsize=14&hidenavigation=1&theme=dark"
+  style={{
+    width: "100%",
+    height: 500,
+    border: 0,
+    borderRadius: 4,
+    overflow: "hidden"
+  }}
+  title="keywrite-quickstart-js"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+/>

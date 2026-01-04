@@ -1,6 +1,10 @@
-## Core Concepts
+---
+sidebar_position: 2
+---
 
-### How Keywrite Works
+# Core Concepts
+
+## How Keywrite Works
 
 Keywrite operates on a simple principle: **keystroke conversion through configurable mappings**.
 
@@ -9,7 +13,7 @@ User types → Keywrite intercepts → Matches keystroke → Outputs character
      "a"   →   Key event caught   →   Finds "a" in map  →   Displays "∀"
 ```
 
-#### The Process:
+### The Process:
 
 1. **Event Interception:** Keywrite listens to keyboard events on bound input elements
 2. **Pattern Matching:** Each keystroke is matched against the current input method definition
@@ -17,11 +21,11 @@ User types → Keywrite intercepts → Matches keystroke → Outputs character
 4. **State Management:** Keywrite tracks composition state for multi-keystroke sequences
 5. **Visual Feedback:** The resolved character is inserted into the input element
 
-### Input Methods Explained
+## Input Methods Explained
 
 An **input method** is a JavaScript object that defines how keystrokes map to characters. It's the heart of Keywrite's functionality.
 
-#### Basic Structure
+### Basic Structure
 
 ```javascript
 const inputMethod = {
@@ -36,7 +40,7 @@ const inputMethod = {
 };
 ```
 
-#### Components:
+### Components:
 
 1. **SymbolMap:** An object with `value` and `next` keys
 
@@ -45,7 +49,7 @@ const inputMethod = {
 
 2. **InputMethod:** An object mapping keystrokes to SymbolMaps
 
-#### TypeScript Interfaces
+### TypeScript Interfaces
 
 ```typescript
 interface SymbolMap {
@@ -56,11 +60,11 @@ interface SymbolMap {
 type InputMethod = Record<string, SymbolMap>;
 ```
 
-### Key Composition
+## Key Composition
 
 Keywrite supports both simple single-keystroke mappings and complex multi-keystroke sequences.
 
-#### Single Keystroke
+### Single Keystroke
 
 ```javascript
 const simple = {
@@ -74,7 +78,7 @@ const simple = {
 | `a`   | ∀      |
 | `b`   | ⋈      |
 
-#### Multi-Keystroke Sequences
+### Multi-Keystroke Sequences
 
 ```javascript
 const complex = {
@@ -94,7 +98,7 @@ const complex = {
 | `b` + `l`      | ⋉      |
 | `b` + `r`      | ⋊      |
 
-#### Nested Structures
+### Nested Structures
 
 You can nest input methods to arbitrary depths:
 

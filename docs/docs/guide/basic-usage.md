@@ -1,6 +1,10 @@
-## Basic Usage
+---
+sidebar_position: 1
+---
 
-### Creating a Keywrite Instance
+# Basic Usage
+
+## Creating a Keywrite Instance
 
 The `KeywriteWeb` constructor requires two parameters:
 
@@ -23,7 +27,7 @@ const myInputMethod = {
 const keywrite = new KeywriteWeb(inputElement, { myInputMethod });
 ```
 
-#### Supported Elements
+## Supported Elements
 
 Keywrite currently supports binding to:
 
@@ -38,9 +42,9 @@ new KeywriteWeb(document.querySelector('input'), { myInputMethod });
 new KeywriteWeb(document.querySelector('textarea'), { myInputMethod });
 ```
 
-### Enabling/Disabling
+## Enabling/Disabling
 
-#### Default Behavior
+## Default Behavior
 
 By default, Keywrite is **enabled** when initialized. You can override this by passing a third parameter:
 
@@ -49,7 +53,7 @@ By default, Keywrite is **enabled** when initialized. You can override this by p
 const keywrite = new KeywriteWeb(inputElement, { myInputMethod }, false);
 ```
 
-#### Runtime Control
+## Runtime Control
 
 Toggle Keywrite on and off by changing the `on` property:
 
@@ -69,11 +73,11 @@ This is useful for:
 -   Language switchers in your UI
 -   Conditional input method activation
 
-### Multiple Input Methods
+## Multiple Input Methods
 
 You can add multiple input methods to a single instance, allowing users to switch between different keyboard layouts.
 
-#### Adding Multiple Methods
+## Adding Multiple Methods
 
 ```javascript
 import inputMethod1 from './inputmethod1';
@@ -87,7 +91,7 @@ const keywrite = new KeywriteWeb(document.querySelector('input'), {
 });
 ```
 
-#### Switching Between Methods
+## Switching Between Methods
 
 Use the `current` property to switch active input methods:
 
@@ -102,7 +106,7 @@ keywrite.current = 'mnemonic';
 keywrite.current = 'default';
 ```
 
-#### Example: Language Selector
+## Example: Language Selector
 
 ```javascript
 const amharicIM = {

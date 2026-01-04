@@ -1,10 +1,14 @@
-## Creating Input Methods
+---
+sidebar_position: 2
+---
 
-### Input Method Structure
+# Creating Input Methods
+
+## Input Method Structure
 
 An input method in Keywrite is a JavaScript object that defines mappings from keystrokes to characters. Understanding this structure is essential for creating your own input methods.
 
-#### Basic Structure
+## Basic Structure
 
 ```javascript
 const inputMethod = {
@@ -15,14 +19,14 @@ const inputMethod = {
 };
 ```
 
-#### Components
+## Components
 
 Every input method consists of **SymbolMaps** - objects with two required properties:
 
 -   **`value`**: The character to output (string) or `null` if this is an intermediate state
 -   **`next`**: A nested input method object for multi-keystroke sequences, or `null` if this is a terminal state
 
-#### How Keywrite Processes Input
+## How Keywrite Processes Input
 
 When you type a key:
 
@@ -31,7 +35,7 @@ When you type a key:
 3. If `next` exists, Keywrite moves to that nested input method for the next keystroke
 4. If `next` is `null`, the composition is complete and Keywrite resets to the root level
 
-### Single-Keystroke Mappings
+## Single-Keystroke Mappings
 
 The simplest input method maps one key to one character:
 
@@ -49,7 +53,7 @@ const simpleMapping = {
 -   Press `b` → outputs `β`, composition complete
 -   Press `g` → outputs `γ`, composition complete
 
-### Multi-Keystroke Sequences
+## Multi-Keystroke Sequences
 
 For multi-keystroke input, use nested structures:
 
@@ -77,7 +81,7 @@ const multiKeyMapping = {
 -   Press `e` → outputs `∈`, **composition continues** (next is not null)
 -   Press `e` again → replaces `∈` with `∉`, composition complete
 
-### Intermediate States with Null Values
+## Intermediate States with Null Values
 
 You can create intermediate states that don't output characters immediately:
 
@@ -99,7 +103,7 @@ const intermediateState = {
 -   Press `a` → outputs `χα`, composition complete
 -   Press `b` → outputs `χβ`, composition complete
 
-### Arbitrary Nesting Depth
+## Arbitrary Nesting Depth
 
 Keywrite supports unlimited nesting levels:
 
@@ -128,7 +132,7 @@ const deepNesting = {
 -   Press `u` → replaces `⊂` with `⊆`, composition continues
 -   Press `n` → replaces `⊆` with `⊈`, composition complete
 
-### Character Replacement Behavior
+## Character Replacement Behavior
 
 When a keystroke produces a new character and `next` is not null, Keywrite **replaces** the previous character rather than appending:
 
@@ -150,7 +154,7 @@ const replacement = {
 -   Press `a` → `ም` is replaced with `ማ` (not `ምማ`)
 -   Press `i` → `ም` is replaced with `ሚ` (not `ምሚ`)
 
-### Multiple Entry Points
+## Multiple Entry Points
 
 An input method can have multiple top-level keys:
 
@@ -169,7 +173,7 @@ const multipleRoots = {
 
 Each top-level key starts an independent composition sequence.
 
-### Key Naming and Special Characters
+## Key Naming and Special Characters
 
 Keys can be any string, including special characters:
 
@@ -186,7 +190,7 @@ const specialKeys = {
 };
 ```
 
-### Example: Mathematical Symbols
+## Example: Mathematical Symbols
 
 Here's a complete example showing various composition patterns:
 
@@ -238,7 +242,7 @@ const mathInputMethod = {
 -   `!` → `¬` → `!=` → `≠` (special characters)
 -   `s` → (nothing) → `ss` → `ß` (null intermediate)
 
-### Understanding State Management
+## Understanding State Management
 
 Keywrite maintains an internal state machine:
 
@@ -269,7 +273,7 @@ const stateExample = {
 };
 ```
 
-### TypeScript Type Definitions
+## TypeScript Type Definitions
 
 For TypeScript users, here are the exact type definitions:
 
@@ -287,7 +291,7 @@ const myInputMethod: InputMethod = {
 };
 ```
 
-### What Happens with Unmapped Keys
+## What Happens with Unmapped Keys
 
 When a key is pressed that doesn't exist in the current state:
 

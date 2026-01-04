@@ -16,7 +16,9 @@
         "commit": "git-cz",
         "release": "changeset publish",
         "version": "changeset version",
-        "docs": "docsify serve docs"
+        "docs:start": "yarn --cwd ./docs start",
+        "docs:build": "yarn --cwd ./docs build",
+        "docs:serve": "yarn --cwd ./docs serve"
     },
     "devDependencies": {
         "@commitlint/cli": "11.0.0",
@@ -25,7 +27,6 @@
         "@typescript-eslint/parser": "4.14.2",
         "commitizen": "4.2.3",
         "cz-conventional-changelog": "3.3.0",
-        "docsify-cli": "^4.4.4",
         "eslint": "^7.19.0",
         "eslint-config-prettier": "7.2.0",
         "eslint-plugin-prettier": "3.3.1",

@@ -1,4 +1,8 @@
-## Introduction to Ethiopic Script
+---
+sidebar_position: 2
+---
+
+# The Ethiopic Script
 
 ### Overview
 
@@ -22,8 +26,6 @@ The Ethiopic syllabary features:
 -   Additional orders for some syllographs (up to 14 orders)
 -   **Labiovelar forms** (w-modified consonants)
 -   Unique punctuation and numeral systems
-
----
 
 ## The Mnemonic Approach
 
@@ -93,8 +95,6 @@ Numbers map by value, not appearance:
 
 Every keystroke produces immediate visual feedback. **No dead keys** are used - every key press results in a visible character or character modification.
 
----
-
 ## Ethiopic Syllable Composition
 
 ### The Orders System
@@ -148,8 +148,6 @@ Some syllographs have up to 14 orders, including:
 
 -   **Labiovelar forms** (7th-12th orders) - w-modified versions
 -   **Additional vowel variants** - Language-specific forms
-
----
 
 ## Consonant Mappings
 
@@ -207,8 +205,6 @@ Some consonants use alternative keys to avoid conflicts:
 | `H`       | ሕ             | Pharyngeal h (ħ)    |
 | `hh`      | ኅ             | Velar fricative (x) |
 | `K`       | ኽ             | Velar k             |
-
----
 
 ## Lone Vowels (Glottal and Pharyngeal)
 
@@ -292,8 +288,6 @@ In Eritrean Tigrinya, modern writing strictly uses 4th order forms:
 | `aaa`  | ዐ      | Pharyngeal base               |
 | `aaaa` | አ      | 1st order (archaic)           |
 
----
-
 ## Phonological Redundancy
 
 Many Ethiopic languages have multiple syllographs representing the same sound (homophones). Keywrite handles this through **double-strike** patterns.
@@ -323,8 +317,6 @@ Four syllographs represent "h" in Amharic:
 | `S`  | ጽ      | Most common      |
 | `SS` | ፅ      | Rare alternative |
 
----
-
 ## Labiovelar Forms
 
 Some consonants have **labiovelar** variants (w-modified forms), primarily in the k/q and g families. These represent consonant + w + vowel combinations.
@@ -352,8 +344,6 @@ Double vowel patterns also produce labiovelars:
 | `koo` | ኰ      | `kue` (7th order labiovelar) |
 | `quu` | ቍ      | `quu`                        |
 | `qoo` | ቈ      | `que`                        |
-
----
 
 ## Punctuation
 
@@ -400,14 +390,12 @@ Ethiopic uses angle quotation marks (guillemets):
 
 | Keys  | Output | Name                   |
 | ----- | ------ | ---------------------- |
-| `<`   | ‹      | Single left guillemet  |
-| `<<`  | «      | Double left guillemet  |
-| `>`   | ›      | Single right guillemet |
-| `>>`  | »      | Double right guillemet |
-| `<<<` | <      | ASCII less-than        |
-| `>>>` | >      | ASCII greater-than     |
-
----
+| `<`   | `‹`    | Single left guillemet  |
+| `<<`  | `«`    | Double left guillemet  |
+| `>`   | `›`    | Single right guillemet |
+| `>>`  | `»`    | Double right guillemet |
+| `<<<` | `<`    | ASCII less-than        |
+| `>>>` | `>`    | ASCII greater-than     |
 
 ## Numerals
 
@@ -479,8 +467,6 @@ In Ge'ez and "Unified Ethiopic" input methods, **Ethiopic numerals are the defau
 1 → ፩   (Ethiopic)
 '1 → 1  (Western)
 ```
-
----
 
 ## Language-Specific Input Methods
 
@@ -615,8 +601,6 @@ In Ge'ez and "Unified Ethiopic" input methods, **Ethiopic numerals are the defau
 -   Limited syllabary for efficiency
 
 **Syllabary Coverage:** ~190 characters
-
----
 
 ## Special Composition Rules
 

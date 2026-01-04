@@ -1,20 +1,23 @@
-## Advanced Usage
+---
+sidebar_position: 3
+---
 
-### Extending the Core Package
+# Advanced Usage
+
+## Extending the Core Package
 
 The `@keywrite/core` package provides the platform-agnostic input method logic. The `@keywrite/web` package is itself an extension of core that adds web-specific functionality.
 
-#### When to Use Core Directly
+## When to Use Core Directly
 
 You may want to extend `@keywrite/core` for:
 
 -   **Desktop applications** (Electron, Tauri)
 -   **Mobile applications** (React Native, Ionic)
 -   **Rich text editors** (Draft.js, Slate, ProseMirror)
--   **Custom rendering** (Canvas, WebGL, game engines)
 -   **Non-browser JavaScript environments**
 
-#### The Write Method
+## The Write Method
 
 The core `write()` method handles input method logic:
 
@@ -36,7 +39,7 @@ class CustomKeywrite extends KeywriteCore {
 }
 ```
 
-#### Example Pattern
+## Example Pattern
 
 Here's the general pattern for extending core:
 

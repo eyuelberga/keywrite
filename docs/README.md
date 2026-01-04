@@ -1,44 +1,41 @@
-### What is Keywrite?
+# Website
 
-**Keywrite** is a JavaScript Input Method Editor (IME) library that enables users to input text in languages that cannot be easily represented on a standard QWERTY keyboard.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-Built with flexibility and ease of use in mind, Keywrite allows developers to add multi-lingual typing capabilities to web applications through configurable input methods.
+## Installation
 
-**Example:** Type "ni" → "ን", "na" → "ና" in Ethiopic script
+```bash
+yarn
+```
 
-### What is an Input Method Editor (IME)?
+## Local Development
 
-An **Input Method Editor (IME)** is a utility that provides options to input text in languages that use a keyboard layout other than QWERTY. IMEs help users enter text in languages with larger, more complex character sets, such as Ethiopic, Japanese, Chinese, and Korean.
+```bash
+yarn start
+```
 
-#### How IMEs Work:
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-1. **Keystroke Conversion:** You type phonetic sounds or Roman characters (e.g., "ni hao")
-2. **Character Mapping:** The IME converts them into the target script (e.g., 你好)
-3. **Visual Feedback:** Characters appear on screen as you type
+## Build
 
-IMEs are essential for languages such as:
+```bash
+yarn build
+```
 
--   Ethiopic (Amharic, Tigrinya, Ge'ez)
--   East Asian languages (Chinese, Japanese, Korean)
--   Indic languages (Hindi, Bengali, Tamil)
--   Arabic and Hebrew scripts
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Why Keywrite?
+## Deployment
 
-Keywrite solves several key challenges when building multi-lingual web applications:
+Using SSH:
 
--   **No Native Keyboard Support:** Many languages lack native keyboard layouts on standard devices
--   **Configurable Input Methods:** Define custom key mappings for any language or script
--   **Easy Integration:** Works seamlessly with standard HTML input elements
--   **Lightweight:** Pure JavaScript with no external dependencies
--   **Flexible:** Support multiple input methods in a single application
+```bash
+USE_SSH=true yarn deploy
+```
 
-### Key Features
+Not using SSH:
 
--   ✅ **Configurable Input Methods:** Define custom keystroke-to-character mappings
--   ✅ **Multi-level Key Sequences:** Support complex character composition with nested mappings
--   ✅ **Multiple Input Methods:** Switch between different input methods at runtime
--   ✅ **Standard Element Binding:** Works with `<input>` and `<textarea>` elements
--   ✅ **Runtime Control:** Enable/disable input methods dynamically
--   ✅ **Pre-made Input Methods:** Available for various Ethiopic languages
--   ✅ **Extensible Core:** Extend the core package for custom implementations
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
