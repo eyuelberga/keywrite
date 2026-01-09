@@ -8,7 +8,7 @@
 
 <p align="center">
 <a href="https://github.com/eyuelberga/keywrite/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/eyuelberga/keywrite"></a>
-<img alt="build" src="https://travis-ci.com/eyuelberga/keywrite.svg?branch=main">
+<img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/eyuelberga/keywrite/.github%2Fworkflows%2Frelease.yml">
 <a href="https://github.com/eyuelberga/keywrite/blob/main/CODE_OF_CONDUCT.md"><img alt="CONTRIBUTING" src="https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg"></a>
 
 </p>
